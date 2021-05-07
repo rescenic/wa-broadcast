@@ -1,0 +1,9 @@
+{
+    "webserviceUrl": "http://localhost:8000/api/",
+    "websocketPort": 8888,
+    "puppeteer": {
+        "headless": true,        
+        "executablePath": "/usr/bin/google-chrome"
+    },
+    "folderDownload": "unduhan"
+}
