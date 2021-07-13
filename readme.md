@@ -24,6 +24,7 @@ wa-broadcast is simple application to send bulk whatsapp message using whatsapp-
 
 ## Problem
 - If happen login loop, you can remove file `session.json`, reopen this application and now you can scan barcode again
+- `npm update` to update all package used in this application, this is needed if whatsapp web changed
  
 ## Copyright
 
