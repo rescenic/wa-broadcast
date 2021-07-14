@@ -4,6 +4,7 @@ const fs = require('fs')
 const qrcode = require('qrcode-terminal')
 const Downloader = require('./downloader')
 const WebSocket = require('ws')
+const _ = require('lodash')
 const {
     Client,    
     MessageMedia,
@@ -167,8 +168,16 @@ async function handleMessage(e) {
                     }
                 }                         
             }
+            // jika mimetype tidak ada dalam list mimetypecaption maka kirim dulu captionnya scecara terpisah
+            if(options.media){
+                if(!_.includes(Config.mimetypeCaption,options.media.mimetype)){
+                    if(!_.isEmpty(numbers[i].message)){
+                        client.sendMessage(numbers[i].to, numbers[i].message)
+                    }
+                }
+            }
             
-            client.sendMessage(numbers[i].to, numbers[i].message, options);
+            client.sendMessage(numbers[i].to, numbers[i].message, options)
         }
     }
 }
