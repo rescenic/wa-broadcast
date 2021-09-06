@@ -3,7 +3,7 @@
     "websocketPort": 8888,
     "puppeteer": {
         "headless": false,        
-        "executablePath": "/usr/bin/google-chrome"
+        "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
     },
     "folderDownload": "unduhan",
     "mimetypeCaption": [
